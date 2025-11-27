@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Django-Master-Layout-and-Template-Inheritance</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
-</head>
-<body style="margin:10px">
-<h1>home page</h1>
-</body>
-</html>
+{% extends 'layouts/layout.html' %}
+
+{% block content %}
+    {% include "components/navigationbar.html" %}
+    {% include "components/hero.html" %}
+    {% include "components/features.html" %}
+    {% include "components/product.html" %}
+    {% include "components/testimonials.html" %}
+    {% include "components/newsletter.html" %}
+    {% include "components/footer.html" %}
+{% endblock %}
